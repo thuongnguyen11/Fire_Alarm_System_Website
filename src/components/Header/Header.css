@@ -1,0 +1,5 @@
+.header {
+    @apply flex justify-between items-center mt-0 h-20 px-10 text-2xl font-extrabold ;
+    background-image: linear-gradient(to right, yellow , red);
+
+}

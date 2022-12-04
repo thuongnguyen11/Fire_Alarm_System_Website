@@ -1,0 +1,16 @@
+.css-i4bv87-MuiSvgIcon-root {
+    font-size: 30px !important;
+}
+
+.item {
+    @apply w-2/5  py-8 px-20 list-none mb-5 text-lg;
+    width: 47.5%;
+}
+
+.infor {
+    @apply text-4xl font-semibold;
+}
+
+.icon {
+    font-size: 5;
+}
