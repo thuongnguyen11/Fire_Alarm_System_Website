@@ -22,9 +22,9 @@ function Home() {
 
   const AddAllTitemsToTable = (Devices) => {
     setInfor(Devices);
-    if (parseInt(Devices[0]) <= 5000 && parseInt(Devices[1]) == 1 && parseInt(Devices[2]) <= 35) {
+    if (parseInt(Devices[0]) <= 1000 && parseInt(Devices[1]) == 1 && parseInt(Devices[2]) <= 35) {
       setStatus("Bình thường");
-    } else if (parseInt(Devices[0]) > 5000 && parseInt(Devices[1]) == 0 && parseInt(Devices[2]) > 35) {
+    } else if (parseInt(Devices[0]) > 1000 && parseInt(Devices[1]) == 0 && parseInt(Devices[2]) > 35) {
       setStatus("Có cháy");
     } else {
       setStatus("Báo động");
@@ -51,14 +51,14 @@ function Home() {
       <Time className="text-gray-900" />
       <div className="mx-32 mt-14 items-center">
         <ul className="flex flex-wrap justify-evenly w-full text-center items-center">
-          <li className={`item text-yellow-500 ${parseInt(infor[1]) == 0 ? "border-red-500 border-4" : ""}`}>
+          <li className={`item text-yellow-500 ${parseInt(infor[1]) == 0 ? "border-red-500 border-4" : "border-gray-300 border-2"}`}>
             <div className="flex justify-center items-center">
               <WhatshotIcon sx={{ fontSize: 20 }} />
               <div className="fire">Lửa</div>
             </div>
             <div className="infor">{infor[1] ? "Không có lửa" : "Có lửa"}</div>
           </li>
-          <li className={`item text-blue-500 ${parseInt(infor[2]) > 35 ? "border-red-500 border-4" : ""}`}>
+          <li className={`item text-blue-500 ${parseInt(infor[2]) > 35 ? "border-red-500 border-4" : "border-gray-300 border-2"}`}>
             <div className="flex justify-center items-center">
               <DeviceThermostatIcon sx={{ fontSize: 20 }} />
               <div className="temp">Nhiệt độ</div>
@@ -67,7 +67,7 @@ function Home() {
             <div className="infor">{infor[2]}&nbsp;&nbsp;<sup>o</sup>C</div>
 
           </li>
-          <li className={`item text-fuchsia-500 ${parseInt(infor[0]) > 5000 ? "border-red-500 border-4" : ""}`}>
+          <li className={`item text-fuchsia-500 ${parseInt(infor[0]) > 1000 ? "border-red-500 border-4" : "border-gray-300 border-2"}`}>
             <div className="flex justify-center items-center">
               <GasMeterIcon sx={{ fontSize: 20 }} />
               <div className="gas">Nồng độ khí gas</div>
